@@ -127,18 +127,19 @@
 
     <TextView
         android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="319dp"
+        android:layout_height="56dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:text="Login"
+        android:text="Already have an account?\nLogin"
         android:textColor="#453851"
-        android:textSize="36sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
