@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
@@ -20,7 +21,10 @@ public class QrActivity extends AppCompatActivity {
 
     DBHelper DB;
 
-    ImageButton homeButton;
+    ImageButton homeButton, couponsButton, rewardButton;
+
+    TextView pointsTextView;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +35,13 @@ public class QrActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
+        //points = intent.getIntExtra("points",0);
+
+        int points = DB.getPoints(email);
+
+        pointsTextView = findViewById(R.id.points);
+        pointsTextView.setText("Available points: " + points);
+
 
         String emailAddress = email;
 
@@ -39,11 +50,35 @@ public class QrActivity extends AppCompatActivity {
         generateQRCode(emailAddress, qrCodeImageView);
 
         homeButton = findViewById(R.id.homeButton);
+        couponsButton = findViewById(R.id.couponsButton);
+        rewardButton = findViewById(R.id.rewardButton2);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+        couponsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CouponActivity.class);
+                intent.putExtra("name",name);
+                intent.putExtra("email",email);
+                startActivity(intent);
+            }
+
+        });
+
+        rewardButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RewardActivity.class);
+                intent.putExtra("name",name);
+                intent.putExtra("email",email);
                 startActivity(intent);
             }
 

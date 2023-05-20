@@ -126,14 +126,19 @@
         app:srcCompat="@drawable/btn_arraw1" />
 
     <TextView
-        android:id="@+id/redirectNewReg"
+        android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot your password?"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:text="Login"
         android:textColor="#453851"
-        android:textSize="16sp"
+        android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup" />
+        app:layout_constraintTop_toBottomOf="@+id/signup"
+        app:layout_constraintVertical_bias="0.392" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,11 +73,12 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#00FFFFFF"
+        android:contentDescription="logs in user"
         app:layout_constraintEnd_toEndOf="@+id/loginPassword"
         app:layout_constraintTop_toBottomOf="@+id/loginPassword"
-        app:srcCompat="@drawable/btn_arraw1"
-        android:contentDescription="logs in user"/>
+        app:srcCompat="@drawable/btn_arraw1" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -88,51 +89,22 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
-            style="@android:style/Widget.Button"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="0.5"
-            android:background="@drawable/btn_background"
-            android:drawableEnd="@drawable/facebook"
-            android:padding="16dp"
-            android:text="Facebook"
-            android:textColor="#453851"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
-            style="@android:style/Widget.Button"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="8dp"
-            android:layout_weight="0.5"
-            android:background="@drawable/btn_background"
-            android:drawableEnd="@drawable/google"
-            android:padding="16dp"
-            android:text="Google"
-            android:textColor="#453851"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/login"/>
 
     <TextView
         android:id="@+id/redirectNewReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
-        android:textColor="#453851"
-        android:textSize="48sp"
         android:clickable="true"
+        android:text="New? Register"
+        android:textColor="#453851"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.386" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

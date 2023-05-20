@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                     String name = DB.getRelativeName(email,password);
                     if(checkuseremailpass==true){
                         Toast.makeText(MainActivity.this, "Sign in Successfully", Toast.LENGTH_SHORT).show();
+                        GlobalVariables.name = name;
+                        GlobalVariables.email = email;
                         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                         intent.putExtra("name",name);
                         intent.putExtra("email",email);

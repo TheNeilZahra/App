@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="coupon_names">
+        <item>20% off</item>
+        <item>$5 off</item>
+        <item>Free delivery</item>
+        <item>Buy one, get one free</item>
+        <item>10% off</item>
+    </string-array>
+
+    <string-array name="coupon_descriptions">
+        <item>Get 20% off your next purchase</item>
+        <item>Get €5 off your purchase of €50 or more</item>
+        <item>Get free delivery on your next order</item>
+        <item>Buy one product and get another for free</item>
+        <item>Get 10% off your next purchase</item>
+    </string-array>
+
+    <array name="coupon_icons">
+        <item>@drawable/coupon_icon</item>
+        <item>@drawable/coupon_icon</item>
+        <item>@drawable/coupon_icon</item>
+        <item>@drawable/coupon_icon</item>
+        <item>@drawable/coupon_icon</item>
+    </array>
+
+    <string-array name="reward_names">
+        <item>50% off</item>
+        <item>$10 off</item>
+        <item>Free gift</item>
+        <item>Special event invitation</item>
+        <item>20% cashback</item>
+    </string-array>
+
+    <string-array name="reward_descriptions">
+        <item>Get 50% off your next purchase</item>
+        <item>Get $10 off your purchase of $100 or more</item>
+        <item>Receive a free gift with your order</item>
+        <item>Get an exclusive invitation to a special event</item>
+        <item>Earn 20% cashback on your purchase</item>
+    </string-array>
+
+    <array name="reward_icons">
+        <item>@drawable/reward</item>
+        <item>@drawable/reward</item>
+        <item>@drawable/reward</item>
+        <item>@drawable/reward</item>
+        <item>@drawable/reward</item>
+    </array>
+
+    <integer-array name="reward_points">
+        <item>1000</item>
+        <item>400</item>
+        <item>10</item>
+        <item>40</item>
+        <item>150</item>
+    </integer-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+</resources>
