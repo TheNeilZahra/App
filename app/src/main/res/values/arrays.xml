@@ -2,7 +2,7 @@
 <resources>
     <string-array name="coupon_names">
         <item>20% off</item>
-        <item>$5 off</item>
+        <item>€5 off</item>
         <item>Free delivery</item>
         <item>Buy one, get one free</item>
         <item>10% off</item>
@@ -26,7 +26,7 @@
 
     <string-array name="reward_names">
         <item>50% off</item>
-        <item>$10 off</item>
+        <item>€10 off</item>
         <item>Free gift</item>
         <item>Special event invitation</item>
         <item>20% cashback</item>
@@ -34,7 +34,7 @@
 
     <string-array name="reward_descriptions">
         <item>Get 50% off your next purchase</item>
-        <item>Get $10 off your purchase of $100 or more</item>
+        <item>Get 10 off your purchase of €100 or more</item>
         <item>Receive a free gift with your order</item>
         <item>Get an exclusive invitation to a special event</item>
         <item>Earn 20% cashback on your purchase</item>
