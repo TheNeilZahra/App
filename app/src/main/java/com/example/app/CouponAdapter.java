@@ -16,6 +16,8 @@ public class CouponAdapter extends RecyclerView.Adapter<CouponItemViewHolder> {
         this.coupons = coupons;
     }
 
+
+    //Inflater to populate coupons Layout
     @NonNull
     @Override
     public CouponItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -24,6 +26,7 @@ public class CouponAdapter extends RecyclerView.Adapter<CouponItemViewHolder> {
         return new CouponItemViewHolder(view);
     }
 
+    //Binding the coupons
     @Override
     public void onBindViewHolder(@NonNull CouponItemViewHolder holder, int position) {
         Coupon coupon = coupons.get(position);

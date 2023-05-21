@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = loginEmail.getText().toString();
                 String password = loginPassword.getText().toString();
 
+                //Validates that the Account exists
                 if(email.equals("")||password.equals(""))
                     Toast.makeText(MainActivity.this, "Please enter all the fields!", Toast.LENGTH_SHORT).show();
                 else{

@@ -37,6 +37,7 @@ public class CouponItemViewHolder extends RecyclerView.ViewHolder {
 
     private Button redeemButton;
 
+    //Populates the coupon data
     public CouponItemViewHolder(View itemView) {
         super(itemView);
         iconImageView = itemView.findViewById(R.id.coupon_image);
@@ -45,11 +46,13 @@ public class CouponItemViewHolder extends RecyclerView.ViewHolder {
         redeemButton = itemView.findViewById(R.id.redeem_button);
     }
 
+    //Binds the data
     public void bind(Coupon coupon) {
         iconImageView.setImageResource(R.drawable.coupon);
         nameTextView.setText(coupon.getName());
         descriptionTextView.setText(coupon.getDescription());
 
+        //OnClickListener for the redeem button
         redeemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +64,7 @@ public class CouponItemViewHolder extends RecyclerView.ViewHolder {
         });
     }
 
+    //Generates the QR Code
     public void generateQRCode(String data, String couponName) {
         // Create a QR code writer
         QRCodeWriter qrCodeWriter = new QRCodeWriter();

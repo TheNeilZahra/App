@@ -31,6 +31,8 @@ public class CouponActivity extends AppCompatActivity {
         loyaltyButton = findViewById(R.id.loyaltyButton);
         rewardButton = findViewById(R.id.rewardButton);
 
+        //On set Listeners
+
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

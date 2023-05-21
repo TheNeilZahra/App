@@ -14,19 +14,20 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context, "login.db", null, 1);
     }
 
-
+    //Creates the table Users
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
         MyDB.execSQL("CREATE TABLE users(email TEXT PRIMARY KEY, name TEXT, password TEXT, points INTEGER DEFAULT 0)");
     }
 
-
+    //Drops the table if it is an old version
     @Override
     public void onUpgrade(SQLiteDatabase MyDB, int oldVersion, int newVersion) {
         MyDB.execSQL("drop Table if exists users");
         onCreate(MyDB);
     }
 
+    //Inserts the the table data
     public Boolean insertData(String name, String email, String password, int points) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -41,8 +42,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
     }
 
-
-
+    //Checks the relative Email Value
     public Boolean checkEmail(String email) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * from users where email = ?", new String[] {email});
@@ -52,6 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
     }
 
+    //Checks if the email value and password values match an entry in the table
     public Boolean checkemailpassword(String email, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT * FROM users WHERE email = ? AND password = ?", new String[] { email, password });
@@ -61,7 +62,7 @@ public class DBHelper extends SQLiteOpenHelper {
             return false;
     }
 
-
+    //Retrieves the name of the user with the corresponding email and password
     public String getRelativeName(String email, String password) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT name FROM users WHERE email = ? AND password = ?", new String[] {email, password});
@@ -76,6 +77,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    //Adds points to the account
     public void addPoints(String email, int points) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -83,6 +85,7 @@ public class DBHelper extends SQLiteOpenHelper {
         MyDB.update("users", contentValues, "email = ?", new String[] { email });
     }
 
+    //Removes points from the account
     public void removePoints(String email, int points) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         int currentPoints = getPoints(email);
@@ -94,6 +97,7 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+    //Gets the amount of points the account has
     public int getPoints(String email) {
         SQLiteDatabase MyDB = this.getReadableDatabase();
         Cursor cursor = MyDB.rawQuery("SELECT points FROM users WHERE email = ?", new String[]{email});

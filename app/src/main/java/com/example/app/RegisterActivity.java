@@ -46,6 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 points = 0;
 
+                //Makes sure that all the fields are entered & Meet the requirements
                 if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 } else if (!isValidEmail(email)) {

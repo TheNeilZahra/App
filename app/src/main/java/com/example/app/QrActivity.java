@@ -35,7 +35,6 @@ public class QrActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String email = intent.getStringExtra("email");
-        //points = intent.getIntExtra("points",0);
 
         int points = DB.getPoints(email);
 

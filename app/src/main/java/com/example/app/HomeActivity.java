@@ -22,18 +22,13 @@ public class HomeActivity extends AppCompatActivity {
     int points;
 
     public static final String SHARED_PREFS ="sharedPrefs";
-    //public static final String TEXT = "text";
 
-    //private String text;
-
-    //int counter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-       // counter++;
 
         DB = new DBHelper(this);
         Intent intent = getIntent();
@@ -77,7 +72,6 @@ public class HomeActivity extends AppCompatActivity {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //saveData();
                 Intent intent = new Intent(getApplicationContext(), QrActivity.class);
                 intent.putExtra("name",name);
                 intent.putExtra("email",email);
@@ -90,7 +84,6 @@ public class HomeActivity extends AppCompatActivity {
         layout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //saveData();
                 Intent intent = new Intent(getApplicationContext(), CouponActivity.class);
                 intent.putExtra("name",name);
                 intent.putExtra("email",email);
@@ -103,7 +96,6 @@ public class HomeActivity extends AppCompatActivity {
         layout3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //saveData();
                 Intent intent = new Intent(getApplicationContext(), RewardActivity.class);
                 intent.putExtra("name",name);
                 intent.putExtra("email",email);
@@ -126,37 +118,9 @@ public class HomeActivity extends AppCompatActivity {
 
         });
 
-
-
-        /*
-        if (counter>1) {
-            loadData();
-            updateViews();
-        }
-         */
     }
 
 
-    /*
-    public void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putString(TEXT, userName.getText().toString());
-
-        editor.apply();
-        Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT);
-    }
-
-    public void loadData() {
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        text = sharedPreferences.getString(TEXT, "");
-    }
-
-    public void updateViews() {
-        userName.setText(text);
-    }
-    */
 
 
 
